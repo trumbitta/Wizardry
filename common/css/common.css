@@ -1,3 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);    
+
 body {
-    background-color: rgb(161, 161, 161);
+    background-color: rgb(43, 21, 53);
+    font-size: 16px;
+	color: rgba(255, 255, 255, 0.75);
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+	width: 960px;
+	margin: 40px auto;
+	padding: 10px;
+	font-family: "Droid Sans", sans-serif;
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+}
+
+header, footer {
+	margin: 20px 0;
+}
+
+p {
+	margin: 20px 0;
+	padding: 10px 0;
+}
+
+footer {
+	font-size: 13px;
+	text-align: right;
+	font-style: italic;
 }
