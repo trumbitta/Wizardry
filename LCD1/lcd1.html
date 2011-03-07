@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<title>LCD</title> 
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:regular,bold);
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	background-color: rgba(0, 0, 0, 0.8);
+	background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* webkit */
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+section, article {
+	display: block;
+	font-family: "Ubuntu";
+	font-size: 60px;
+	font-weight: bold;
+}
+
+section {
+	margin: 10px;
+	clear: left;
+}
+
+article {
+	width: 600px;
+	min-height: 400px;
+	text-align: right;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	margin: 100px auto;
+	padding: 10px;
+	background-color: #d6dcd3;
+	background: -moz-linear-gradient(top, #d6dcd3 0%, #dfe5d7 40%, #b3bead 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6dcd3), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* webkit */
+}
+
+article a, article p {
+	color: rgb(61, 61, 61);
+	margin: 0;
+	padding: 0;
+}
+
+article a {
+	text-decoration: none;
+}
+
+ul {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	border: 4px solid rgb(61, 61, 61);
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	display: inline-block;
+	margin: 0 0 0 10px;
+	padding: 0 8px;
+}
+
+#first, #third {
+	border-bottom: 2px solid rgb(61, 61, 61);
+	padding-bottom: 20px;
+	-webkit-box-shadow: 0 2px 0 rgba(61, 61, 61, 0.2);
+	-moz-box-shadow: 0 2px 0 rgba(61, 61, 61, 0.2);
+	box-shadow: 0 2px 0 rgba(61, 61, 61, 0.2);
+
+}
+
+#second {
+	background-color: rgb(61, 61, 61);
+	display: inline-block;
+	padding: 4px 8px;
+	font-size: 30px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+#second p {
+	color: rgb(214, 220, 211);
+	text-transform: uppercase;
+}
+
+.second {
+	background-color: rgba(61, 61, 61, 0.2);
+	display: inline-block;
+	padding: 4px 8px;
+	font-size: 30px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.second p {
+	color: rgb(214, 220, 211);
+	text-transform: uppercase;
+}
+
+#first li a, #third p, #fourth p {
+	text-shadow: 1px 3px 2px rgba(61, 61, 61, 0.3);
+}
+
+#first li, #second {
+	-webkit-box-shadow: 1px 3px 2px rgba(61, 61, 61, 0.3);
+	-moz-box-shadow: 1px 3px 2px rgba(61, 61, 61, 0.3);
+	box-shadow: 1px 3px 2px rgba(61, 61, 61, 0.3);
+}
+
+</style>
+
+</head> 
+<body> 
+
+<section id="container">
+<article>
+<section id="first">
+	<ul>
+		<li><a href="#">24</a></li><li><a href="#">02</a></li><li><a href="#">11</a></li>
+	</ul>
+</section>
+<section class="second">
+	<p>Start</p>
+</section>
+<section class="second">
+	<p>Stop</p>
+</section>
+<section id="second">
+	<p>Delay</p>
+</section>
+<section id="third">
+	<p>009</p>
+</section>
+<section id="fourth">
+<p>18:38:04</p>
+</section>
+</article> 
+</section>
+</body> 
+</html> 
