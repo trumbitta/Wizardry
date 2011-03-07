@@ -1,13 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);    
 
-body {
+html {
     background-color: rgb(43, 21, 53);
+	background: -moz-linear-gradient(top, #2B1535 0%, #745589 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2B1535), color-stop(100%,#745589)); /* webkit */
+	width: 100%;
+	height: 100%;    
+}
+
+body {
     font-size: 16px;
 	color: rgba(255, 255, 255, 0.75);
 	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
-	width: 960px;
+	width: 900px;
 	margin: 40px auto;
-	padding: 10px;
+	padding: 20px;
 	font-family: "Droid Sans", sans-serif;
 	border: 2px solid rgba(255, 255, 255, 0.75);
 	-webkit-border-radius: 20px;
