@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Splash! A simple animation.</title>
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Nova+Square);
+/** Now that the real deal **/
+
+/* The Singer */
+@-webkit-keyframes focus-center {
+	/* Hidden and dangerous */
+	0% { opacity: 0; }
+	
+	/* Back to the original size, and start twisting */
+	1% { -webkit-transform: scale(1); -webkit-transform: rotate(180deg); }
+	
+	/* It's Showtime! */
+	2% { opacity: 1; }
+	
+	/* Trust me. I don't know what this does */
+	100% { opacity: 1; -webkit-transform: scale(1); -webkit-transform: rotate(180deg);}	
+}
+
+/* The Fans */
+@-webkit-keyframes focus-crown {
+	/* Starting hidden is always better */
+	0% { opacity: 0; }	
+	
+	/* The singer is coming, let's pop in! */
+	2% { opacity: 1; }
+	
+	/* Whoa! Catch him! Catch the singer! Seriousl... Splash! */
+	3% { -webkit-transform: scale(0.8); -webkit-transform: rotate(340deg); }
+	
+	/* Keep on eye-sight */
+	4% { opacity: 1; }
+	
+	/* And now, the Round of Derision*/
+	20% { opacity: 1; -webkit-transform: scale(0.8); -webkit-transform: rotate(160deg);}
+	
+	/* Trust me. I don't know what this does */		
+	100% { opacity: 1; }	
+}
+ 
+#canvas {
+	/*  Some canvas to put it in order */
+	width: 720px;
+	height: 486px;
+	margin: 10px auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* webkit */
+	position: relative;
+}
+ 
+#focus-center {
+	/* Why, centering and rounding */
+	border-radius: 500px;
+	width: 180px;
+	height: 180px;
+	margin-left: -90px;
+	margin-top: -90px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eab92d), color-stop(100%,#c79810)); /* webkit */
+	box-shadow: none;
+	
+	/*  Scale up then vanish. So you can reappear scaling down just like you were
+		stage diving! */
+	-webkit-transform: scale(3);
+	
+	/* All ready. Curtain up! */	
+	opacity: 0;	
+}
+
+#focus-center p {
+	/* Why, centering and styling */
+	position: relative;
+	top: 50%;
+	left: 50%;
+	font-size: 80px;
+	width: 150px;
+	height: 100px;
+	line-height: 115px;
+	margin-left: -75px;
+	margin-top: -50px;
+	font-family: "Nova Square";
+	font-weight: normal;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.9);
+	text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 0, rgba(0, 0, 0, 0.8) -1px -1px 0;
+	
+	/* All ready. Curtain up! */	
+	opacity: 0;
+}
+
+#focus-crown {
+	/*  the image below is made with the amazing icons I bought from
+		Gedy Rivera, Lifetree Creative, Inc.
+		gedyrivera.com & lifetreecreative.com */
+	background-image: url("img/social-crown.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+	/*  Why, centering */
+	height: 471px;
+	width: 471px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: -238px;
+	margin-left: -236px;
+	
+	/*  Scale down now, so we can go back to almost the original size in the
+		animation */
+	-webkit-transform: scale(0.5);
+	
+	/* All ready. Curtain up! */
+	opacity: 0;
+}
+
+/****
+	These will bind the #canvas (but keep on reading below for the tricky 
+	#trigger part) to the various actors.
+****/
+#canvas:hover #focus-center {
+	-webkit-animation-name: focus-center;
+	-webkit-animation-duration: 100s;
+	-webkit-animation-iteration-count: 1;
+}
+
+#canvas:hover #focus-center p {
+	-webkit-animation-name: focus-center;
+	-webkit-animation-duration: 100s;
+	-webkit-animation-iteration-count: 1;
+}
+
+#canvas:hover #focus-crown {
+	-webkit-animation-name: focus-crown;
+	-webkit-animation-duration: 100s;
+	-webkit-animation-iteration-count: 1;
+}
+
+
+/****
+	Just some scenic coolness.
+****/
+.actor-full {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -320px;
+	margin-top: -200px;	
+	width: 640px;
+	height: 400px;
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: rgba(0, 0, 0, 0.8) 10px 10px 400px inset;
+	border: 2px solid rgba(0, 0, 0, 0.6);
+	border-radius: 8px;	
+}
+
+/****
+	The "Play" button.
+	The trick here is that it's:
+		- actually a child node of the #canvas
+		- dropped visually down through abosolute positioning
+	This way, you can use it to hover over #canvas and start your animation while
+	still being able to "film" only the #canvas with - say - screenr.com  
+****/
+#trigger {
+	width: 600px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	margin-left: -300px;
+	background-color: silver;
+	text-align: center;
+}
+
+</style>
+
+
+</head>
+<body>
+
+	<div id="canvas">
+		<div id="focus-center" class="actor-full">
+			<p>\m/</p>
+		</div>
+		<div id="focus-veil" class="actor-full">
+			<div id="focus-crown"></div>
+		</div>
+		<div id="trigger">Play</div>
+	</div>
+
+</body>
+</html>
