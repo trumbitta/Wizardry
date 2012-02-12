@@ -1,7 +1,7 @@
 Just Some Experiments
 =====================
 
-And a nice place to store and share them :)
+And a nice place to store and share them
 
 Quite Not Updated Changelog
 ---------------------------
